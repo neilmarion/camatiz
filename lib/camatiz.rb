@@ -1,3 +1,4 @@
+require "sidekiq"
 require "camatiz/engine"
 
 module Camatiz

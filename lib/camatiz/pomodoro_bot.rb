@@ -172,6 +172,7 @@ if Rails.env.production?
       Camatiz::PomodoroBot.run
     rescue Slack::Web::Api::Errors::SlackError
       raise("Invalid ENV['CAMATIZ_SLACK_API_TOKEN']")
+    rescue StandardError => e
     end
   end
 end
@@ -184,6 +185,7 @@ if Rails.const_defined?('Server') && !Rails.env.production?
       Camatiz::PomodoroBot.run
     rescue Slack::Web::Api::Errors::SlackError
       raise("Invalid ENV['CAMATIZ_SLACK_API_TOKEN']")
+    rescue StandardError => e
     end
   end
 end
