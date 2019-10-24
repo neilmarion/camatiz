@@ -123,7 +123,7 @@ module Camatiz
       channel.set_name(new_name, user)
     end
 
-    command 'help' do |client, data, match|
+    command 'camatiz help' do |client, data, match|
       user = User.find_by(slack_id: data.user)
       channel = user.subscribed_channel
 
